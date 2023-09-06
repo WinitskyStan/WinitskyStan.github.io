@@ -1,8 +1,7 @@
 
-# WinitskyStan.github.io
 
 
-Stan Winitsky's github pages repo.
+Stan Winitsky's GitHub Pages repo.
 
 [Click Here](https://winitskystan.github.io/)
 

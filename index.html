@@ -2,6 +2,11 @@
 <head>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .container {
             max-width: 800px;
@@ -9,17 +14,63 @@
         }
         .card {
             margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .card-img-top {
             height: 200px;
             object-fit: cover;
+            border-radius: 10px;
+        }
+        /* Use Roboto Slab for headings and Roboto for paragraphs */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+        p {
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Use a color scheme for links and headings */
+        a {
+            color: #007bff;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #343a40;
+        }
+        /* Use Font Awesome icons for list items */
+        ul li:before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 10px;
+            color: #28a745;
+        }
+        /* Add header and footer styles */
+        .header {
+          padding: 10px;
+          text-align: center;
+          background-color: #1abc9c;
+          color: white;
+          font-size: 30px;
+        }
+
+        footer {
+          padding: 10px;
+          text-align: center;
+          background-color: #343a40;
+          color: white;
         }
     </style>
 </head>
 <body>
+    <!-- Add header element -->
+    <div class="header">
+    </div>
     <div class="container">
-        <h1 class="text-center">Hello, I'm Stan Winitsky</h1>
-        <p class="text-center">I'm a Java Software Developer living in Richmond Hill, Ontario, Canada.</p>
+        <h1 class="text-center">Hello, I'm Stan Winitsky</h1>        
         <p class="text-center">I spend most of my time developing applications in Spring Boot, Java, and SQL. 
             I enjoy reading programming books, listening to programming podcasts and most of all spending time with my wife Sharon. </p>
         <p class="text-center">Check out the podcasts below:</p>        
@@ -32,7 +83,8 @@
 
         
     </div>
+    <!-- Add footer element -->
+    <footer>
+    </footer>
 </body>
 </html>
-
-

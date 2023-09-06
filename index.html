@@ -1,125 +1,214 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>Stan Winitsky's GitHub Page</title>
     <!-- Import Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700&display=swap" rel="stylesheet">
     <!-- Import Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
+  <style>
+    /* Add some style to the website */
+    ul li:before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 10px;
+        color: #28a745;
+    }
+
     body {
-      font-size: 20px;
+      font-family: Arial, sans-serif;
+      margin: 0;
     }
-    .header {
-      font-size: 30px;
-    }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .card {
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        /* Use Roboto Slab for headings and Roboto for paragraphs */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Roboto Slab', serif;
-        }
-        p {
-            font-family: 'Roboto', sans-serif;
-        }
-        /* Use a color scheme for links and headings */
-        a {
-            color: #007bff;
-        }
-        a:hover {
-            color: #0056b3;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: #343a40;
-        }
-        /* Use Font Awesome icons for list items */
-        ul li:before {
-            content: "\f058";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            margin-right: 10px;
-            color: #28a745;
-        }
-        /* Add header and footer styles */
-        .header {
-          padding: 10px;
-          text-align: center;
-          background-color: #1abc9c;
-          color: white;
-          font-size: 30px;
-        }
 
-        footer {
-          padding: 10px;
-          text-align: center;
-          background-color: #343a40;
-          color: white;
-        }
-        
-       /* Add media queries for different screen sizes */
-       @media (max-width: 576px) { 
-         /* Use smaller font size for headings and paragraphs on small screens */
-         h1, h2, h3, h4, h5, h6 {
-           font-size: 1.2rem;
-         }
-         p {
-           font-size: 0.9rem;
-         }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    main h2 {
+      margin-top: 0;
+    }
+
+    main ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    main ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #eee;
+      color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* Add media queries for responsiveness */
+    
+    /* For screens smaller than 600px */
+    @media screen and (max-width: 600px) {
+      
+      /* Hide the navigation menu */
+      nav ul {
+        display: none;
+      }
+
+      /* Make the header h1 smaller */
+      header h1 {
+        font-size: 24px;
+      }
+
+      /* Make the main h2 smaller */
+      main h2 {
+        font-size: 18px;
+      }
+      
+      /* Make the main h3 smaller */
+      main h3 {
+        font-size: 16px;
+      }
+      
+      /* Make the main p smaller */
+      main p {
+        font-size: 14px;
+      }
+      
+       /* Make the footer p smaller */
+       footer p {
+        font-size: 12px;
+       }
+      
+       /* Make the images smaller and centered */
+       img {
+         width: 80%;
+         height: auto;
+         display: block;
+         margin-left: auto;
+         margin-right: auto; 
+       }
+      
+       /* Make the text size responsive using vw unit */
+       h1, h2, h3, p {
+         font-size: calc(10px + 2vw);
+       }
+      
+    }
+    
+     /* For screens between 600px and 1200px */
+     @media screen and (min-width: 600px) and (max-width: 1200px) {
+
+       /* Make the header h1 smaller */
+       header h1 {
+         font-size: 32px;
        }
 
-       @media (min-width: 768px) { 
-         /* Use flexbox to align the cards horizontally on medium screens and above */
-         .card-deck {
-           display: flex;
-           flex-wrap: wrap;
-         }
-         .card-deck .card {
-           flex-basis: calc(50% - 40px);
-           margin-left: 20px;
-           margin-right: 20px;
-         }
+       /* Make the main h2 smaller */
+       main h2 {
+         font-size: 24px;
        }
+       
+       /* Make the main h3 smaller */
+       main h3 {
+         font-size: 20px;
+       }
+       
+       /* Make the main p smaller */
+       main p {
+         font-size: 16px;
+       }
+       
+        /* Make the footer p smaller */
+        footer p {
+         font-size: 14px;
+        }
+       
+        /* Make the images smaller and centered */
+        img {
+          width: 60%;
+          height: auto;
+          display: block;
+          margin-left: auto;
+          margin-right: auto; 
+        }
+       
+     }
+    
+     /* For screens larger than 1200px */
+     @media screen and (min-width: 1200px) {
 
-    </style>
+       /* Make the images larger and centered */
+       img {
+         width: 40%;
+         height:auto; 
+         display:block; 
+         margin-left:auto; 
+         margin-right:auto; 
+       }
+       
+     }
+    
+</style>
 </head>
 <body>
-    <!-- Add header element -->
-    <div class="header">
-    </div>
-    <div class="container">
-      <!-- Use bootstrap classes to create a responsive layout -->
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10 col-sm-12">
-          <h1 class="text-center">Hello, I'm Stan Winitsky</h1>        
-          <p class="text-center">I spend most of my time developing applications in Spring Boot, Java, and SQL. 
-              I enjoy reading programming books, listening to programming podcasts and most of all spending time with my wife Sharon. </p>
-          <p class="text-center">Check out the podcasts below:</p>        
-          <ul class="list-unstyled text-center">
+  <header>
+  </header>
+  <main>
+    <h2>Hi, I'm Stan Winitsky</h2>
+    <p>I am a software developer based out of Richmond Hill, Ontario, Canada. I spend most of my time developing applications in Spring Boot, Java, and SQL. I enjoy reading programming books, listening to programming podcasts and most of all spending time with my wife and son.</p>
+    <h3>Check out the podcasts below:</h3>
+    <ul>
               <li><a href="https://bootifulpodcast.fm/#/">A Bootiful Podcast</a>: A podcast hosted by Josh Long, a Spring developer advocate at VMware, where he interviews the people who make the Spring framework and ecosystem.</li>
               <li><a href="http://airhacks.fm/">Air Hacks FM</a>: A podcast hosted by Adam Bien, a Java Champion and consultant, where he talks with Java experts about various topics related to Java EE, Jakarta EE, MicroProfile, Quarkus and more.</li>
               <li><a href="https://www.se-radio.net/">Software Engineering Radio</a>: A podcast for professional software developers that covers a broad range of topics such as architecture, design, testing, security, DevOps and more.</li>
               <li><a href="https://www.javapubhouse.com/">Java Pub House</a>: A podcast hosted by Freddy Guime and Bob Paulin, two Java enthusiasts and user group leaders, where they discuss the latest news and trends in the Java world.</li>
-          </ul>
-        </div>
-      </div>        
-    </div>
-    <!-- Add footer element -->
-    <footer>
-    </footer>
+    </ul>
+
+    <p>Follow me on <a href="https://www.linkedin.com/in/stan-winitsky-513a353/ ">LinkedIn</a></p>
+    <p>Follow me on <a href="https://github.com/WinitskyStan?tab=repositories">GitHub</a></p>
+  </main>
+  <footer>
+  </footer>
 </body>
 </html>
-
